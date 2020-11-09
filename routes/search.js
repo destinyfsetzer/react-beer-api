@@ -7,7 +7,6 @@ const KEY       = config.get('key');
 
 // GET Beer by name
 router.get('/', function (req, res) {
-    
     let searchQuery     = req._parsedUrl.query; // outputs q=bud
     let keyCharacter    = '&';
 

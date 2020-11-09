@@ -14,16 +14,16 @@ let port;
 
 
 // Environment Debugger
-if (app.get('env') === 'development') {    
+if (app.get('env') === 'development') {
     app.use(morgan('dev'));
-    port = 4000;
-} else if (app.get('env') === 'production') {    
+    port = 4001;
+} else if (app.get('env') === 'production') {
     port = process.env.PORT;
 }
 
 
 app.use('/api', function (req, res, next) {
-    var allowedOrigins  = ['https://react-beer-library.herokuapp.com', 'http://localhost:3000'];
+    var allowedOrigins  = ['https://react-beer-library.herokuapp.com', 'http://localhost:4000'];
     var origin          = req.headers.origin;
 
     if (allowedOrigins.indexOf(origin) > -1) {
@@ -55,7 +55,6 @@ console.log('Application Env: ' + app.get('env'));
 /*
     Terminal command to set environment
     export NODE_ENV=production
-
     Terminal command to set key
     export app_key=1234
 */
