@@ -11,7 +11,7 @@ router.get('/', function (req, res) {
     let keyCharacter = '?';
 
     // use request to make HTTP calls
-    request('https://api.brewerydb.com/v2/categories' + keyCharacter + 'key=' + KEY, function (error, response, body) {
+    request('https://api.brewerydb.com/v2/styles' + keyCharacter + 'key=' + KEY, function (error, response, body) {
 
         if (!error && response.statusCode === 200) {
             res.send(body);
