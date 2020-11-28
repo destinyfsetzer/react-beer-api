@@ -33,7 +33,7 @@ const create = (req, res) => {
   let password = newUser.password;
 
   // INSERT INTO USERS FIRST AND LAST NAME
-  let sql = "INSERT INTO ?? (??, ??, ??, ??, ??) VALUES (?, ?, ?, ?, ?)";
+  let sql = "INSERT INTO users (??, ??, ??, ??, ??) VALUES (?, ?, ?, ?, ?)";
   // WHAT GOES IN THE BRACKETS???
   sql = mysql.format(sql, [
     "users",
