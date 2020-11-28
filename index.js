@@ -4,6 +4,14 @@ const morgan = require("morgan");
 const app = express();
 const bodyParser = require("body-parser");
 
+// Bodyparser middleware
+app.use(
+  bodyParser.urlencoded({
+    extended: false,
+  })
+);
+app.use(bodyParser.json());
+
 // Routes
 const categories = require("./routes/categories");
 const random = require("./routes/random");
@@ -39,13 +47,12 @@ app.use("/api", function (req, res, next) {
   next();
 });
 
-app.use(bodyParser.json());
 app.use("/api/categories", categories);
 app.use("/api/random", random);
 app.use("/api/search", search);
 app.use("/api/beers", beers);
 app.use(users);
-// app.use('/users', usersRouter);
+app.use("/users", usersRouter);
 // app.use('/auth', authRouter);
 
 app.listen(port, () => console.log(`Server listening on port ${port}...`));
