@@ -5,6 +5,8 @@ const morgan = require("morgan");
 const app = express();
 const bodyParser = require("body-parser");
 
+// GO TO BOTTOM OF PAGE AND SET ENVIRONMENT KEY BEFORE SERVER WILL GO UP!!!!!
+
 // Bodyparser middleware
 app.use(
   bodyParser.urlencoded({
