@@ -1,9 +1,9 @@
+require("dotenv").config();
 const request = require("request");
 const express = require("express");
 const router = express.Router();
-const config = require("config");
-const KEY = config.get("key");
-
+// const config = require("config");
+const KEY = process.env.KEY;
 // GET Categories
 router.get("/", function (req, res) {
   let keyCharacter = "?";
