@@ -22,15 +22,17 @@ const search = require("./routes/search");
 const beers = require("./routes/beers");
 
 // Port
-let port;
+// let port;
 
 // Environment Debugger
-if (app.get("env") === "development") {
-  app.use(morgan("dev"));
-  port = 4001;
-} else if (app.get("env") === "production") {
-  port = process.env.PORT;
-}
+// if (app.get("env") === "development") {
+//   app.use(morgan("dev"));
+//   port = 4001;
+// } else if (app.get("env") === "production") {
+//   port = process.env.PORT;
+// }
+
+let port = process.env.PORT;
 
 app.use("/api", function (req, res, next) {
   var allowedOrigins = [
