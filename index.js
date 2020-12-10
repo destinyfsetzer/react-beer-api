@@ -38,7 +38,7 @@ let port = process.env.PORT;
 app.use("/api", function (req, res, next) {
   var allowedOrigins = [
     "https://beer-me-tx.herokuapp.com/",
-    "http://localhost:3000",
+    // "http://localhost:3000",
   ];
   var origin = req.headers.origin;
   res.header("Access-Control-Allow-Origin", "*");
