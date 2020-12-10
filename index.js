@@ -33,7 +33,7 @@ const beers = require("./routes/beers");
 //   port = process.env.PORT;
 // }
 
-let port = process.env.PORT;
+let port = process.env.PORT || 4002;
 
 app.use("/api", function (req, res, next) {
   var allowedOrigins = [

@@ -2,8 +2,8 @@ const request = require("request");
 const express = require("express");
 const router = express.Router();
 // const config = require("config");
-// require("dotenv").config();
-// const KEY = process.env.KEY;
+require("dotenv").config();
+const KEY = process.env.KEY;
 
 // GET Beers
 router.get("/", function (req, res) {
