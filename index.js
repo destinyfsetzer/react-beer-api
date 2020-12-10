@@ -1,7 +1,7 @@
 require("dotenv").config();
 // const config = require("config");
 const express = require("express");
-const morgan = require("morgan");
+// const morgan = require("morgan");
 const app = express();
 const bodyParser = require("body-parser");
 
