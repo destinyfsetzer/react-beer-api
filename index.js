@@ -1,9 +1,10 @@
 require("dotenv").config();
-// const config = require("config");
+const cors = require("cors");
 const express = require("express");
-// const morgan = require("morgan");
-const app = express();
 const bodyParser = require("body-parser");
+
+const app = express();
+app.use(cors());
 
 // GO TO BOTTOM OF PAGE AND SET ENVIRONMENT KEY BEFORE SERVER WILL GO UP!!!!!
 
