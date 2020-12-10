@@ -1,5 +1,5 @@
 require("dotenv").config();
-const config = require("config");
+// const config = require("config");
 const express = require("express");
 const morgan = require("morgan");
 const app = express();
@@ -68,9 +68,9 @@ app.get("/", (req, res) => {
 });
 
 // Configuration
-console.log("Application Name: " + config.get("name"));
-console.log("Application Key: " + config.get("key"));
-console.log("Application Env: " + app.get("env"));
+// console.log("Application Name: " + config.get("name"));
+// console.log("Application Key: " + config.get("key"));
+// console.log("Application Env: " + app.get("env"));
 
 /*
     Terminal command to set environment
